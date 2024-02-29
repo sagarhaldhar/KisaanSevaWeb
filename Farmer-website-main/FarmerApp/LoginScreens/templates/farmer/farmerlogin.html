@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Login And Registration</title>
+    <link rel="stylesheet" href="/static\css\farmerlogin\farmerlogin.css" />
+</head>
+
+<body>
+    <div class="hero">
+        <div class="form-box">
+            <div id="title">KISSAN SEVA</div>
+            <div id="admin">Farmer</div>
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">
+                    Log In
+                </button>
+                <button type="button" class="toggle-btn" onclick="register()">
+                    Register
+                </button>
+            </div>
+            <!-- login -->
+
+            <form id="login" class="input-group">
+                <input type="text" class="input-field" placeholder="Farmer Id" required />
+                <input type="password" class="input-field" placeholder="Enter Password" required />
+
+                <div class="check">
+                    <input type="checkbox" class="check-box" /><span>Remember Password</span>
+                </div>
+                <button type="submit" class="submit-btn">Log In</button>
+            </form>
+
+            <!-- Registration -->
+            <form id="register" class="input-group" action="/login/add-farmer/" method="POST">
+                {% csrf_token %}
+                <input type="text" class="input-field" id="Farmer_name" name="Farmer_name" placeholder="Farmer Name"
+                    required />
+
+                <input type="number" class="input-field" id="Contact_num" name="Contact_num"
+                    placeholder="Contact Number" />
+
+                <input type="email" class="input-field" id="Email_id" name="Email_id" placeholder="Enter Email Id"
+                    required />
+                <input type="password" class="input-field" id="Password" name="Password" placeholder="Enter Password"
+                    required />
+                <div class="check">
+                    <input type="checkbox" class="check-box" required /><span>
+                        I agree to the Terms & Conditions</span>
+                </div>
+                <button type="submit" class="submit-btn">Register</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+        var z = document.getElementById("btn");
+
+        function register() {
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+        function login() {
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0px";
+        }
+    </script>
+</body>
+
+</html>
