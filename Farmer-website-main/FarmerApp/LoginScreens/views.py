@@ -73,3 +73,4 @@ def loginfarmer(request):
     return render(request,"home/index.html",{})
   else:
     messages.success(request,"please register yourself first....")
+    return redirect('/login/farmerlogin')
