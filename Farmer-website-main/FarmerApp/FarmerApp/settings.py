@@ -77,18 +77,17 @@ WSGI_APPLICATION = 'FarmerApp.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
+    # }
+    "default": {
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": "Kisaanseva",
+        "USER": "sagar",
+        "PASSWORD": "sagar123",
+        "HOST": "localhost",
     }
-    # "default": {
-    #     "ENGINE": "django.db.backends.mysql",
-    #     "NAME": "Kisaanseva",
-    #     "USER": "sagar",
-    #     "PASSWORD": "sagar123",
-    #     "HOST": "localhost",
-    #     }
-
 }
 
 

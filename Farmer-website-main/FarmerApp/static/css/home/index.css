@@ -17,11 +17,11 @@ header {
         width: 100%;
         z-index: 999; /* Ensure it stays on top of other content */
         display: flex;
-        background-color: transparent;
+  
         height: 90px;
         justify-content: space-between;
         align-items: center;
-        border-bottom: 1px solid #764505;
+       
 }
 .Kissan_home {
   height: 70px;
@@ -39,11 +39,13 @@ header {
   justify-content: space-evenly;
 
 }
+#navitem{
+  color: #04690d;
+}
 .nav-bar a {
   font-size: 15px;
   letter-spacing: 0.3px;
-  color: #282c3f;
-  /* color: white; */
+  color: #04690d;
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;

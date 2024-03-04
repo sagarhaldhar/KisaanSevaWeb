@@ -4,7 +4,7 @@
 
 <head>
     <title>Login And Registration</title>
-    <link rel="stylesheet" href="/static\css\farmerlogin\farmerlogin.css" />
+    <link rel="stylesheet" href="/static\css\farmerlogin\farmerlogin.css"/>
 </head>
 
 <body>
@@ -21,17 +21,27 @@
                     Register
                 </button>
             </div>
+            
             <!-- login -->
+            
+        <form id="login" name="farmerloginform" class="input-group" action="/login/login-farmer/" method = 'POST'>
+            {% csrf_token %}
 
-            <form id="login" class="input-group">
-                <input type="text" class="input-field" placeholder="Farmer Id" required />
-                <input type="password" class="input-field" placeholder="Enter Password" required />
+                <input type="text" class="input-field" name="EmailId" placeholder="Email Id" required />
+                <input type="password" class="input-field" name="Logpassword" placeholder="Enter Password" required />
 
                 <div class="check">
                     <input type="checkbox" class="check-box" /><span>Remember Password</span>
                 </div>
                 <button type="submit" class="submit-btn">Log In</button>
             </form>
+                        
+            {% for message in messages %}
+            <div style="text-align: center;color: red;"
+            >
+                <strong> {{message}}</strong>
+            </div>
+            {% endfor %}
 
             <!-- Registration -->
             <form id="register" class="input-group" action="/login/add-farmer/" method="POST">
