@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Testimonial
+from .models import Feedback
 
 # Create your views here.
 def home(request):
@@ -20,5 +21,14 @@ def testimonial(request):
     'testi' : testi
   })
 
-# def feedback(request):
-  # if request.method == "POST":
+def feedback(request):
+  if request.method == "POST":
+    Name = request.POST.get("name")
+    message = request.POST.get("feedback")
+    Picture = request.POST.get("picture")
+    f = Feedback()
+    f.name = Name
+    f.feedback = message
+    f.picture = Picture
+    f.save()
+    return render(request,"home/index.html",{})

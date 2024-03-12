@@ -7,4 +7,6 @@ urlpatterns = [
     path('scholarlogin/',scholarlogin),
     path('add-farmer/',add_farmer),
     path('add-scholar/',add_scholar),
+    path('loginfarmer/',loginfarmer),
+    path('loginscholar/',loginscholar),
 ]

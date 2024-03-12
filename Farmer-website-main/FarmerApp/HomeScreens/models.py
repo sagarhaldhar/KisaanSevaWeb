@@ -10,3 +10,10 @@ class Testimonial(models.Model):
     def __str__(self):
         return self.testimonial
     
+class Feedback(models.Model):
+    name = models.CharField(max_length=200)
+    feedback = models.TextField()
+    picture = models.ImageField(upload_to="testimonials/")
+
+    def __str__(self):
+        return self.feedback

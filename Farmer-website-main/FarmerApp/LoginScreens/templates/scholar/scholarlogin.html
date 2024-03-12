@@ -23,9 +23,10 @@
             </div>
             <!-- login -->
 
-            <form id="login" class="input-group">
-                <input type="text" class="input-field" placeholder="Farmer Id" required />
-                <input type="password" class="input-field" placeholder="Enter Password" required />
+            <form id="login" class="input-group" action="/login/loginscholar/" method="POST">
+                {% csrf_token %}
+                <input type="text" name="scholarEmail" class="input-field" placeholder="Email Id" required />
+                <input type="password" name="scholarPassword" class="input-field" placeholder="Enter Password" required />
 
                 <div class="check">
                     <input type="checkbox" class="check-box" /><span>Remember Password</span>

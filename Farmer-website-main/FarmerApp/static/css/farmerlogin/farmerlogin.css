@@ -13,9 +13,9 @@
   background-position: center;
   background-size: cover;
   position: absolute;
- animation: changeImage 40s ease-in 10ms infinite;
- align-items: center;
- justify-content: center;
+  animation: changeImage 40s ease-in 10ms infinite;
+  align-items: center;
+  justify-content: center;
 
 }
 @keyframes changeImage {
@@ -45,14 +45,11 @@
   flex-wrap: inherit;
   min-height: auto;
   min-width: auto;
-} 
-
-.form-box{
   border-radius: 2rem;
   height:40rem;
   width: 25rem;
   position: relative;
-  background-color: rgba(235, 225, 225, 0.5);
+  background-color: rgba(235, 225, 225, 0.813);
   padding: 0.5rem;
   overflow: hidden;
   opacity: 1;
@@ -67,7 +64,6 @@
 #icon{
 border-radius: 4px;
 width: 20px;
-  
 }
 
 .button-box{
@@ -103,6 +99,7 @@ width: 20px;
 }
 
 .input-group{
+  margin-top: 250px;
   top: 180px;
   position:absolute;
   width: 280px;
@@ -124,7 +121,7 @@ width: 20px;
   border-bottom: 1px solid black;
   outline: none;
   background: transparent;
-} 
+}
 .submit-btn{
   width: 85%;
   padding: 10px 30px;
@@ -160,7 +157,7 @@ form ::placeholder{
 #login{
   left: 50px;
 }
- 
+
 #register{
   left: 450px;
 
@@ -172,5 +169,3 @@ height:2rem;
 margin-top : 1.5rem;
 }
 
-
- 

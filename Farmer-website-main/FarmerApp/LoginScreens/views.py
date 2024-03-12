@@ -1,6 +1,5 @@
 from django.shortcuts import render,redirect
 from .models import farmer,scholar
-from django.contrib.messages.api import error
 from django.contrib import messages
 # Create your views here.
 
@@ -16,23 +15,23 @@ def add_farmer(request):
     contact_num = request.POST.get("Contact_num")
     email_id = request.POST.get("Email_id")
     password = request.POST.get("Password")
-  f = farmer()
-  f.Farmer_name = farmer_name
-  f.Contact_num = contact_num
-  f.Email_id = email_id
-  f.Password = password
+    f = farmer()
+    f.Farmer_name = farmer_name
+    f.Contact_num = contact_num
+    f.Email_id = email_id
+    f.Password = password
   # f.save()
   # checking existing -
-  check_existing = farmer.objects.filter(Farmer_name=farmer_name) and farmer.objects.filter(Contact_num = contact_num) and farmer.objects.filter(Email_id = email_id) and farmer.objects.filter(Password = password).exists()
-  if check_existing:
-    messages.error(request,"user already exists !!! try again...")
-    return redirect('/login/login-farmer')
+    check_existing = farmer.objects.filter(Farmer_name=farmer_name) and farmer.objects.filter(Contact_num = contact_num) and farmer.objects.filter(Email_id = email_id) and farmer.objects.filter(Password = password).exists()
+    if check_existing:
+      messages.error(request,"User already exists! Please login...")
+      return redirect('/login/farmerlogin/')
   
-  else:
-    f.save()
-    messages.success(request,'successfully saved...')
-    return redirect('/login/login-farmer')
-  
+    else:
+      f.save()
+      messages.success(request,'successfully saved...')
+    # return redirect('login/farmerlogin/')
+      return render(request,"home/index.html",{})
 
 # scholar form validation :-
 def add_scholar(request):
@@ -49,13 +48,13 @@ def add_scholar(request):
   # checking existing -
   check_existing = scholar.objects.filter(Scholar_name=scholar_name) and scholar.objects.filter(Contact_num = contact_num) and scholar.objects.filter(Email_id = email_id) and scholar.objects.filter(Password = password).exists()
   if check_existing:
-    messages.error(request,"user already exists !!! try again...")
-    return redirect('/login/login-scholar')
+    messages.error(request,"User already exists! Please login...")
+    return redirect('/login/scholarlogin/')
 
   else:
     s.save()
     messages.success(request,'successfully saved..Please login')
-    return redirect('/login/login-scholar')
+    return render(request,"home/index.html",{})
 
 def loginfarmer(request):
   if request.method == "POST":
@@ -72,4 +71,21 @@ def loginfarmer(request):
     return render(request,"home/index.html",{})
   else:
     messages.success(request,"please register yourself first....")
-    return redirect('/login/farmerlogin')
+    return redirect('/login/farmerlogin/')
+  
+def loginscholar(request):
+  if request.method == "POST":
+    emailsc = request.POST.get("scholarEmail")
+    passw = request.POST.get("scholarPassword")
+  f = farmer()
+  f.Email_id = emailsc
+  f.Password = passw
+
+  # checking existing -
+  check_existing =farmer.objects.filter(Email_id = emailsc) and farmer.objects.filter(Password = passw).exists()
+
+  if check_existing:
+    return render(request,"home/index.html",{})
+  else:
+    messages.success(request,"please register yourself first....")
+    return redirect('/login/farmerlogin/')

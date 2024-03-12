@@ -58,7 +58,7 @@ function rate(score) {
   var ratingEmoji = document.getElementById("rating-emoji");
   switch (score) {
     case 1:
-      ratingEmoji.innerHTML = "😡";
+      ratingEmoji.innerHTML = "😢";
       break;
     case 2:
       ratingEmoji.innerHTML = "😐";

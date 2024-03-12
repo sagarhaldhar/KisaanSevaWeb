@@ -61,7 +61,7 @@
       <img class="banner_image" src="{%static 'images/6.jpg'%}" alt=" Main Banner" style="height: 650px;"/>
     </div>
 
-    <div style="text-align: center;" class="category_heading">our trending blogs</div>
+    <div style="text-align: center;" class="category_heading">Trending blogs</div>
     <div class="category_items">
       <a href="Blogs.html"><img class="sale_item" src="{%static 'images/b1.png'%}" /></a>
 
@@ -90,8 +90,8 @@
     <!-- FEEDBACK FORM-->
 
     <div class="Feedback_heading">Feedback Form</div>
-    <div style="background-color: rgb(197, 233, 221);box-shadow: 10px 10px 10px 10px rgb(114, 124, 127);" class="container">
-      <form action="#" method="POST">
+    <div style="background-color: rgb(218, 239, 232);box-shadow: 10px 10px 10px 10px rgb(114, 124, 127);" class="container">
+      <form action="/feedback/" method="POST">
         {% csrf_token %}
         <div class="form-group">
           <label for="name">Name:</label>
@@ -143,5 +143,4 @@
   <!-- javascript -->
   <script src="{%static 'js/index.js'%}"></script>
 </body>
-
 </html>
