@@ -4,7 +4,7 @@
 
 <head>
   <title>Kissan Seva</title>
-  <link rel="stylesheet" href="/static\css\home\index.css" />
+  <link rel="stylesheet" href="{%static 'css/home/index.css'%}">
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <!-- Add Font Awesome library -->
@@ -12,15 +12,14 @@
 </head>
 
 <body>
-  <header style="background-color: rgba(213, 226, 213, 0.977);">
+  <header style="background-color: rgba(203, 247, 203, 0.778);">
     <div class="logo_container">
-      <a href=""><img class="Kissan_home" src="/static/images/l1.png" alt="Kissan Home" /></a>
+      <a href=""><img class="Kissan_home" src="{%static 'images/l1.png'%}" alt="Kissan Home"/></a>
     </div>
     <nav class="nav-bar">
       <a id="navitem"  href="">Home</a>
       <a id="navitem" href="/aboutus">About</a>
       <a id="navitem" href="/blogs">Blogs</a>
-      <a id="navitem" href="/contactus">Contact Us</a>
       <a id="navitem"  href="/testimonials">Testimonials</a>
     </nav>
     <div class="search_bar">
@@ -34,10 +33,11 @@
         <span class="material-symbols-outlined action_icon"> person</span>
         <span class="action_name">Login</span>
         <!-- Dropdown options -->
+
         <div class="dropdown_options">
           <a href="/admin" class="dropdown_item">Admin</a>
-          <a href="/login/farmerlogin" class="dropdown_item">Farmer</a>
-          <a href="/login/scholarlogin" class="dropdown_item">Scholar</a>
+          <a href="/login/farmerlogin/" class="dropdown_item">Farmer</a>
+          <a href="/login/scholarlogin/" class="dropdown_item">Scholar</a>
         </div>
       </div>
       <!-- aman -->
@@ -58,52 +58,55 @@
 
   <main>
     <div class="banner_container">
-      <img class="banner_image" src="/static/images/6.jpg" alt=" Main Banner " />
+      <img class="banner_image" src="{%static 'images/6.jpg'%}" alt=" Main Banner" style="height: 650px;"/>
     </div>
 
-    <div class="category_heading">our trending blogs</div>
+    <div style="text-align: center;" class="category_heading">our trending blogs</div>
     <div class="category_items">
-      <a href="Blogs.html"><img class="sale_item" src="/static/images/b1.png" /></a>
+      <a href="Blogs.html"><img class="sale_item" src="{%static 'images/b1.png'%}" /></a>
 
-      <a href="Blogs.html"><img class="sale_item" src="/static/images/b2.jpg" /></a>
+      <a href="Blogs.html"><img class="sale_item" src="{%static 'images/b2.jpg'%}" /></a>
 
-      <a href="Blogs.html"><img class="sale_item" src="/static/images/b3.jpg" /></a>
+      <a href="Blogs.html"><img class="sale_item" src="{%static 'images/b3.jpg'%}" /></a>
 
-      <a href="Blogs.html"><img class="sale_item" src="/static/images/b4.jpg" /></a>
+      <a href="Blogs.html"><img class="sale_item" src="{%static 'images/b4.jpg'%}" /></a>
 
-      <a href="Blogs.html"><img class="sale_item" src="/static/images/b5.jpg" /></a>
+      <a href="Blogs.html"><img class="sale_item" src="{%static 'images/b5.jpg'%}" /></a>
 
-      <a href="Blogs.html"><img class="sale_item" src="/static/images/b6.jpg" /></a>
+      <a href="Blogs.html"><img class="sale_item" src="{%static 'images/b5.jpg'%}" /></a>
     </div>
 
     <div class="Testimonials_heading">Testimonials</div>
     <div class="Testimonials_items">
-      <a href="Testimonials.html"><img class="T_item" src="/static/images/t1.png" /></a>
+      <a href="Testimonials.html"><img class="T_item" src="{%static 'images/t1.png'%}" /></a>
 
-      <a href="Testimonials.html"><img class="T_item" src="/static/images/t2.png" /></a>
+      <a href="Testimonials.html"><img class="T_item" src="{%static 'images/t2.png'%}" /></a>
 
-      <a href="Testimonials.html"><img class="T_item" src="/static/images/t3.png" /></a>
+      <a href="Testimonials.html"><img class="T_item" src="{%static 'images/t3.png'%}" /></a>
 
-      <a href="Testimonials.html"><img class="T_item" src="/static/images/t4.png" /></a>
+      <a href="Testimonials.html"><img class="T_item" src="{%static 'images/t4.png'%}" /></a>
     </div>
 
-    <!-- FEEDBACK -->
+    <!-- FEEDBACK FORM-->
+
     <div class="Feedback_heading">Feedback Form</div>
-    <div class="container">
-      <form action="#" method="post">
+    <div style="background-color: rgb(197, 233, 221);box-shadow: 10px 10px 10px 10px rgb(114, 124, 127);" class="container">
+      <form action="#" method="POST">
+        {% csrf_token %}
         <div class="form-group">
           <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required />
+          <input style="border: 1px solid;"  type="text" id="name" name="name" required />
         </div>
         <div class="form-group">
-          <label for="email">Email:</label>
-          <input type="text" id="email" name="email" required />
+          <label for="feedback">Feedback:</label>
+          <textarea style="border: 1px solid;" id="feedback" name="feedback" required></textarea>
         </div>
         <div class="form-group">
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" required></textarea>
+          <label for="picture">Upload your Profile picture:</label>
+          <input type="file" id="picture" name="picture" required />
         </div>
-        <div class="rating">
+        
+        <div class="rating" name="rating" id="rating">
           <label for="rating">Rate your experience:</label>
           <span onclick="rate(1)">⭐️</span>
           <span onclick="rate(2)">⭐️</span>
@@ -113,15 +116,16 @@
         </div>
         <div id="rating-emoji"></div>
         <div class="form-group">
-          <input type="submit" value="Submit" />
+          <input style="border: 1px solid;" type="submit" value="Submit" />
         </div>
       </form>
     </div>
   </main>
   <!-- FOOTER STARTS HERE  -->
   <footer>
-    <p>&copy; 2024 Your Company. All rights reserved.</p>
-    <p>Contact us: info@yourcompany.com</p>
+    <a style="color:aliceblue; text-decoration: none;"  id="navitem" href="/contactus">Contact Us</a>
+    <p>&copy; 2024 Codxia. All rights reserved.</p>
+    <p>Contact us: KisaanSeva@Codxia.com</p>
 
     <div class="footer-links">
       <a href="#">Privacy Policy</a>
@@ -137,7 +141,7 @@
     </div>
   </footer>
   <!-- javascript -->
-  <script src="/static\js\index.js"></script>
+  <script src="{%static 'js/index.js'%}"></script>
 </body>
 
 </html>

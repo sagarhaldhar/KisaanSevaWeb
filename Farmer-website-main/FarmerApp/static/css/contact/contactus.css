@@ -106,11 +106,11 @@ button {
   border-radius: 5px;
   cursor: pointer;
   font-size: 18px;
-  transition: background-color 0.3s;
+  transition: background-color 0.1s;
 }
 
 button:hover {
-  background-color: #035107;
+  background-color: #ed2b55;
 }
 
 .form-group {

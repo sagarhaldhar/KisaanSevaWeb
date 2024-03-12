@@ -24,7 +24,7 @@
             
             <!-- login -->
             
-        <form id="login" name="farmerloginform" class="input-group" action="/login/login-farmer/" method = 'POST'>
+        <form id="login" name="farmerloginform" class="input-group" action="login/farmerlogin/" method = 'POST'>
             {% csrf_token %}
 
                 <input type="text" class="input-field" name="EmailId" placeholder="Email Id" required />
@@ -44,7 +44,7 @@
             {% endfor %}
 
             <!-- Registration -->
-            <form id="register" class="input-group" action="/login/add-farmer/" method="POST">
+            <form id="register" class="input-group" action="login/farmerlogin/" method="POST">
                 {% csrf_token %}
                 <input type="text" class="input-field" id="Farmer_name" name="Farmer_name" placeholder="Farmer Name"
                     required />

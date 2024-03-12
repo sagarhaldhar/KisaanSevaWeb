@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .models import Testimonial
 
 # Create your views here.
 def home(request):
@@ -15,4 +15,10 @@ def contactus(request):
   return render(request,"contact/contactus.html",{})
 
 def testimonial(request):
-  return render(request,"testimonial/testimonials.html",{})
+  testi = Testimonial.objects.all()
+  return render(request,"testimonial/testimonials.html",{
+    'testi' : testi
+  })
+
+# def feedback(request):
+  # if request.method == "POST":

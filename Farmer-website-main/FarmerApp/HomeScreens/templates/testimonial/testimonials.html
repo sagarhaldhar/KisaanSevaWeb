@@ -12,67 +12,27 @@
 <body>
   <main>
     <div class="logo">
-      <a href="index.html"><img src="/static/images/l1.png" alt="Logo" /></a>
+      <a href=""><img src="/static/images/l1.png" alt="Logo" /></a>
     </div>
     <h1>Testimonials</h1>
+    {% for t in testi %}
     <div class="testimonial">
-      <img src="/static/images/t6.jpg" alt="Testimonial Author" />
+      <img src="/media/{{t.picture}}" alt="Testimonial Author"/>
       <div class="content">
         <p class="quote">
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et
-          eros felis. Pellentesque habitant morbi tristique senectus et netus
-          et malesuada fames ac turpis egestas."
+          {{ t.testimonial }}
         </p>
-        <p class="author">Narendra Modi</p>
-        <p class="position">Prime Minister of India</p>
+        <p class="author"> {{ t.name }} </p>
       </div>
       <div style="clear: both"></div>
     </div>
+    {% endfor %}
 
-    <div class="testimonial">
-      <img src="/static/images/t7.jpg" alt="Testimonial Author" />
-      <div class="content">
-        <p class="quote">
-          "Nulla facilisi. Sed commodo nisi ac urna molestie fermentum.
-          Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-          posuere cubilia Curae; Cras fringilla justo vel felis placerat
-          malesuada."
-        </p>
-        <p class="author">Aman Gupta</p>
-        <p class="position">CEO, Gupta Tech</p>
-      </div>
-      <div style="clear: both"></div>
-    </div>
+    
 
-    <div class="testimonial">
-      <img src="/static/images/t8.webp" alt="Testimonial Author" />
-      <div class="content">
-        <p class="quote">
-          "Nulla facilisi. Sed commodo nisi ac urna molestie fermentum.
-          Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-          posuere cubilia Curae; Cras fringilla justo vel felis placerat
-          malesuada."
-        </p>
-        <p class="author">John Cena</p>
-        <p class="position">Marketing Director, You Can't See Me</p>
-      </div>
-      <div style="clear: both"></div>
-    </div>
+    
 
-    <div class="testimonial">
-      <img src="/static/images/t5.webp" alt="Testimonial Author" />
-      <div class="content">
-        <p class="quote">
-          "Nulla facilisi. Sed commodo nisi ac urna molestie fermentum.
-          Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-          posuere cubilia Curae; Cras fringilla justo vel felis placerat
-          malesuada."
-        </p>
-        <p class="author">Elon Musk</p>
-        <p class="position">CEO, Taslaaa</p>
-      </div>
-      <div style="clear: both"></div>
-    </div>
+    
 
     <!-- Add more testimonials here -->
   </main>
