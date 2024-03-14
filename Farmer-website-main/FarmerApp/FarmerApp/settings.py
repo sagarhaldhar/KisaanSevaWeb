@@ -126,8 +126,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
-MEDIA_URL = '/media/'
 
+# settings.py
+
+
+MEDIA_URL = '/media/'
 MEDIA_ROOT = 'C:\\Users\\sagar\\Desktop\\Kisaan seva project\\Farmer-website-main\\FarmerApp\\media'
 # settings.py
 

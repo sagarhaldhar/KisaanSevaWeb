@@ -13,7 +13,7 @@ class Testimonial(models.Model):
 class Feedback(models.Model):
     name = models.CharField(max_length=200)
     feedback = models.TextField()
-    picture = models.ImageField(upload_to="testimonials/")
+    picture = models.ImageField(upload_to="feedback/",null=True,blank=True)
 
     def __str__(self):
         return self.feedback

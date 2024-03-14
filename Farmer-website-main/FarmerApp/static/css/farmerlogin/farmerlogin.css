@@ -102,13 +102,13 @@ width: 20px;
 }
 
 .input-group{
-  top: 180px;
+  top: 30px;
   position:absolute;
   width: 280px;
   transition: .5s;
 }
 #register.input-group {
-  top: 160px;
+  top: 30px;
   position:absolute;
   width: 280px;
   transition: .5s;

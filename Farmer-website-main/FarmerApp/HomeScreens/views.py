@@ -23,13 +23,10 @@ def testimonial(request):
 
 def feedback(request):
   if request.method == "POST":
-    Name = request.POST.get("name")
-    message = request.POST.get("feedback")
-    Picture = request.POST.get("picture")
     f = Feedback()
-    f.name = Name
-    f.feedback = message
-    f.picture = Picture
+    f.name = request.POST.get("name")
+    f.feedback = request.POST.get("feedback")
+    f.picture = request.FILES['picture']
     f.save()
     return render(request,"home/index.html",{})
   
