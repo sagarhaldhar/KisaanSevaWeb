@@ -54,7 +54,7 @@ def add_scholar(request):
   else:
     s.save()
     messages.success(request,'successfully saved..Please login')
-    return render(request,"/scholar/",{})
+    return redirect('/login/scholarlogin/')
 
 def loginfarmer(request):
   if request.method == "POST":
@@ -85,7 +85,7 @@ def loginscholar(request):
   check_existing =farmer.objects.filter(Email_id = emailsc) and farmer.objects.filter(Password = passw).exists()
 
   if check_existing:
-    return render(request,"home/index.html",{})
-  else:
-    messages.success(request,"please register yourself first....")
     return redirect('/scholar/')
+  else:
+    messages.error(request,"please register yourself first....")
+    return redirect('/login/scholarlogin/')

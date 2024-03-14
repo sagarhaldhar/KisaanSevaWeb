@@ -13,9 +13,9 @@
   background-position: center;
   background-size: cover;
   position: absolute;
- animation: changeImage 40s ease-in 10ms infinite;
- align-items: center;
- justify-content: center;
+  animation: changeImage 40s ease-in 10ms infinite;
+  align-items: center;
+  justify-content: center;
 
 }
 @keyframes changeImage {
@@ -45,8 +45,7 @@
   flex-wrap: inherit;
   min-height: auto;
   min-width: auto;
-} 
-
+}
 .form-box{
   border-radius: 2rem;
   height:40rem;
@@ -124,7 +123,7 @@ width: 20px;
   border-bottom: 1px solid black;
   outline: none;
   background: transparent;
-} 
+}
 .submit-btn{
   width: 85%;
   padding: 10px 30px;
@@ -173,4 +172,3 @@ margin-top : 1.5rem;
 }
 
 
- 
