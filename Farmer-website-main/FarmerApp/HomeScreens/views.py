@@ -32,3 +32,6 @@ def feedback(request):
     f.picture = Picture
     f.save()
     return render(request,"home/index.html",{})
+  
+def ScholarUI(request):
+  return render(request,"ScholarUI/welcome.html",{})

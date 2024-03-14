@@ -1,18 +1,16 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Testimonials</title>
-  <link rel="stylesheet" href="/static\css\testimonial\testimonials.css" />
+  <link rel="stylesheet" href="{%static 'css/testimonial/testimonials.css'%}" />
 </head>
-
 <body>
   <main>
     <div class="logo">
-      <a href=""><img src="/static/images/l1.png" alt="Logo" /></a>
+      <a href="/"><img src="{%static 'images/l1.png'%}" alt="Logo" /></a>
     </div>
     <h1>Testimonials</h1>
     {% for t in testi %}
@@ -27,15 +25,7 @@
       <div style="clear: both"></div>
     </div>
     {% endfor %}
-
-    
-
-    
-
-    
-
     <!-- Add more testimonials here -->
   </main>
 </body>
-
 </html>

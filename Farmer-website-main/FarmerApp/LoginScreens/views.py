@@ -54,7 +54,7 @@ def add_scholar(request):
   else:
     s.save()
     messages.success(request,'successfully saved..Please login')
-    return render(request,"home/index.html",{})
+    return render(request,"/scholar/",{})
 
 def loginfarmer(request):
   if request.method == "POST":
@@ -88,4 +88,4 @@ def loginscholar(request):
     return render(request,"home/index.html",{})
   else:
     messages.success(request,"please register yourself first....")
-    return redirect('/login/farmerlogin/')
+    return redirect('/scholar/')

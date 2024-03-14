@@ -10,4 +10,5 @@ urlpatterns = [
     path('contactus/',contactus),
     path('testimonials/',testimonial),
     path('feedback/',feedback),
+    path('scholar/',ScholarUI)
 ]

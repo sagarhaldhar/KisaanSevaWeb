@@ -99,8 +99,7 @@ width: 20px;
 }
 
 .input-group{
-  margin-top: 250px;
-  top: 180px;
+  margin-top: 180px;
   position:absolute;
   width: 280px;
   transition: .5s;
