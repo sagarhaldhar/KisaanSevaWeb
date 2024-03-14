@@ -4,7 +4,7 @@ from django.db import models
 class Testimonial(models.Model):
     name = models.CharField(max_length=200)
     testimonial = models.TextField()
-    picture = models.ImageField(upload_to="testimonials/")
+    picture = models.ImageField(upload_to="testimonial/")
     rating = models.IntegerField(max_length = 1)
 
     def __str__(self):
