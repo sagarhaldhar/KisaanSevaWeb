@@ -12,4 +12,5 @@ urlpatterns = [
     path('feedback/',feedback),
     path('scholar/',ScholarUI),
     path('contactusform/',contactusform),
+    path('research/',research),
 ]

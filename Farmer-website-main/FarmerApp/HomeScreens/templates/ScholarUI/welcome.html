@@ -10,9 +10,9 @@
 
   <body style="background-image: url(/static/images/bgscholar.avif);">
     <header>
-      <div style="color: rgb(245, 184, 163);margin-bottom: 50px;" class="main-heading">Welcome Scholars</div>
+      <div style="color: rgb(247, 51, 12);margin-bottom: 50px;" class="main-heading">Welcome Scholars</div>
       <div>
-        <p style="color: rgb(101, 124, 250);margin: 20px 40px 0px 40px;">
+        <p style="color: rgb(246, 211, 246);margin: 20px 40px 0px 40px;">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis nobis
           officiis dicta dolores? Tenetur consequatur illum eveniet
           reprehenderit corrupti sed molestias amet soluta pariatur eos
@@ -178,7 +178,8 @@
     <main>
       <div class="form-w">upload your research</div>
       <div class="container-w">
-        <form action="#" method="post">
+        <form action="/research/" method="post" enctype="multipart/form-data">
+          {% csrf_token %}
           <div class="form-group-w">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required />
@@ -189,15 +190,14 @@
           </div>
           <div class="form-group-w">
             <label for="Description">Description:</label>
-            <textarea style="height: 200px; width: 95%;" id="Description" name="Description" required></textarea>
+            <textarea style="height: 200px; width: 95%;" id="Description" name="description" required></textarea>
           </div>
           <div class="form-group-p">
             <label for="photo">Profile Photo:</label>
-            <!-- <textarea id="message" name="message" required></textarea> -->
-            <input type="file" required name="photo" id="photo" />
+            <input type="file" required name="photo" id="photo" name="photo"/>
             <br />
             <label for="document">Upload your research paper:</label>
-            <input type="file" required name="document" id="document" />
+            <input type="file" required name="document" id="document" name="document" />
           </div>
           <div class="form-group-w">
             <input type="submit" value="Submit" />
