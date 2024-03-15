@@ -19,7 +19,7 @@
         .main-heading {
 
           text-transform: uppercase;
-          color: #b8f864;
+          color: #f8b364;
           letter-spacing: 0.15em;
           font-size: 3em;
           display: flex;
@@ -273,4 +273,7 @@
             margin-top: 25px;
             margin-bottom: 25px;
             
+          }
+          .form-group-w  textarea {
+            height: 200px;
           }

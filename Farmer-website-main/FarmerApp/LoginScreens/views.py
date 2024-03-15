@@ -77,12 +77,12 @@ def loginscholar(request):
   if request.method == "POST":
     emailsc = request.POST.get("scholarEmail")
     passw = request.POST.get("scholarPassword")
-  f = farmer()
+  f = scholar()
   f.Email_id = emailsc
   f.Password = passw
 
   # checking existing -
-  check_existing =farmer.objects.filter(Email_id = emailsc) and farmer.objects.filter(Password = passw).exists()
+  check_existing =scholar.objects.filter(Email_id = emailsc) and scholar.objects.filter(Password = passw).exists()
 
   if check_existing:
     return redirect('/scholar/')

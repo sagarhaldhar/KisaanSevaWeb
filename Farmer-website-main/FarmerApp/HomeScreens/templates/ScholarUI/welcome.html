@@ -10,9 +10,9 @@
 
   <body style="background-image: url(/static/images/bgscholar.avif);">
     <header>
-      <div class="main-heading">Welcome Scholars</div>
+      <div style="color: rgb(245, 184, 163);margin-bottom: 50px;" class="main-heading">Welcome Scholars</div>
       <div>
-        <p style="color: yellow;">
+        <p style="color: rgb(101, 124, 250);margin: 20px 40px 0px 40px;">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis nobis
           officiis dicta dolores? Tenetur consequatur illum eveniet
           reprehenderit corrupti sed molestias amet soluta pariatur eos
@@ -185,14 +185,18 @@
           </div>
           <div class="form-group-w">
             <label for="email">Email:</label>
-            <input type="text" id="email" name="email" required />
+            <input type="text" id="email" name="email" required/>
+          </div>
+          <div class="form-group-w">
+            <label for="Description">Description:</label>
+            <textarea style="height: 200px; width: 95%;" id="Description" name="Description" required></textarea>
           </div>
           <div class="form-group-p">
             <label for="photo">Profile Photo:</label>
             <!-- <textarea id="message" name="message" required></textarea> -->
             <input type="file" required name="photo" id="photo" />
             <br />
-            <label for="document">Reasearch Paper Please:</label>
+            <label for="document">Upload your research paper:</label>
             <input type="file" required name="document" id="document" />
           </div>
           <div class="form-group-w">

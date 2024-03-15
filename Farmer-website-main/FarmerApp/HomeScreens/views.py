@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Testimonial
 from .models import Feedback
+from .models import ContactUsForm
 
 # Create your views here.
 def home(request):
@@ -32,3 +33,12 @@ def feedback(request):
   
 def ScholarUI(request):
   return render(request,"ScholarUI/welcome.html",{})
+
+def contactusform(request):
+  if request.method == "POST":
+    c = ContactUsForm()
+    c.Name = request.POST.get("name")
+    c.Email = request.POST.get("email")
+    c.Message = request.POST.get("message")
+    c.save()
+    return render(request,"home/index.html",{})

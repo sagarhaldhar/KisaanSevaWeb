@@ -102,7 +102,7 @@ width: 20px;
 }
 
 .input-group{
-  top: 180px;
+  top: 200;
   position:absolute;
   width: 280px;
   transition: .5s;

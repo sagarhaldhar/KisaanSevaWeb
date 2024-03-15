@@ -17,3 +17,8 @@ class Feedback(models.Model):
 
     def __str__(self):
         return self.feedback
+    
+class ContactUsForm(models.Model):
+    Name = models.CharField(max_length=200)
+    Email = models.CharField(max_length=50)
+    Message = models.CharField(max_length=200)
