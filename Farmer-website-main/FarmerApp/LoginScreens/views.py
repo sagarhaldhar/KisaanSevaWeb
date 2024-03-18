@@ -1,6 +1,7 @@
 from django.shortcuts import render,redirect
 from .models import farmer,scholar
 from django.contrib import messages
+from django.contrib.auth import authenticate,login
 # Create your views here.
 
 def farmerlogin(request):

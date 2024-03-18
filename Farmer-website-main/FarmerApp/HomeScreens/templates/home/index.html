@@ -8,11 +8,12 @@
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <!-- Add Font Awesome library -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
 </head>
 
 <body>
-  <header style="background-color: rgba(203, 247, 203, 0.778);">
+  {% include "navbar/navbar.html" %}
+  <!-- <header style="background-color: rgba(203, 247, 203, 0.778);">
     <div class="logo_container">
       <a href="/"><img class="Kissan_home" src="{%static 'images/l1.png'%}" alt="Kissan Home"/></a>
     </div>
@@ -28,11 +29,11 @@
       <input class="search_input" placeholder="Search for reading Blogs and Testimonials" />
     </div>
     <div class="action_bar">
-      <!-- Change Kia -->
+      
       <div class="action_container" onmouseenter="showDropdown()" onmouseenter="hideDropdown()">
         <span class="material-symbols-outlined action_icon"> person</span>
         <span class="action_name">Login</span>
-        <!-- Dropdown options -->
+       
 
         <div class="dropdown_options">
           <a href="/admin" class="dropdown_item">Admin</a>
@@ -40,7 +41,7 @@
           <a href="/login/scholarlogin/" class="dropdown_item">Scholar</a>
         </div>
       </div>
-      <!-- aman -->
+    
 
       <div class="action_container">
         <span class="material-symbols-outlined"> dark_mode </span>
@@ -48,13 +49,13 @@
       </div>
     </div>
 
-    <!-- Hamburger Menu -->
+   
     <div class="hamburger_menu">
       <button onclick="toggleMenu()">
         <i class="fas fa-bars"></i>
       </button>
     </div>
-  </header>
+  </header> -->
 
   <main>
     <div class="banner_container">
