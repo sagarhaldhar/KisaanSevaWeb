@@ -5,13 +5,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Responsive Vertical Timeline</title>
-    <link rel="stylesheet" href="{%static 'css/ScholarUI/welcome.css'%}" />
+    <link rel="stylesheet" href="{%static 'css/ScholarUI/welcome.css/'%}"/>
   </head>
-
-  <body style="background-image: url(/static/images/bgscholar.avif);">
+  
+  <body>
     {% include "navbar/navbar.html" %}
-    <header>
-      <div style="color: rgb(247, 51, 12);margin-bottom: 50px;" class="main-heading">Welcome Scholars</div>
+    <main style="background-image: url(/static/images/bgscholar.avif);margin-top: 0%;">
+  
+      <div style="color: rgb(238, 169, 156);" class="main-heading">Welcome Scholars</div>
       <div>
         <p style="color: rgb(246, 211, 246);margin: 20px 40px 0px 40px;">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis nobis
@@ -175,8 +176,8 @@
         </div>
       </div>
       <div></div>
-    </header>
-    <main>
+  
+    
       <div class="form-w">upload your research</div>
       <div class="container-w">
         <form action="/research/" method="post" enctype="multipart/form-data">
@@ -205,6 +206,11 @@
           </div>
         </form>
       </div>
+      <br>
+
     </main>
+    {% include "footer/footer.html" %}
+  
   </body>
+
 </html>

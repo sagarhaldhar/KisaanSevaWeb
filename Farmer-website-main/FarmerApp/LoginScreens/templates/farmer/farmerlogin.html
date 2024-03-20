@@ -4,7 +4,7 @@
 
 <head>
     <title>Login And Registration</title>
-    <link rel="stylesheet" href="{%static 'css/farmerlogin/farmerlogin.css'%}"/>
+    <link rel="stylesheet" href="{%static 'css/farmerlogin/farmerlogin.css/'%}"/>
 </head>
 
 <body>
@@ -24,7 +24,7 @@
             
             <!-- login -->
             
-        <form id="login" name="farmerloginform" class="input-group" action="/login/loginfarmer/" method = 'POST'>
+        <form id="login" name="farmerloginform" style="top: 200px;"  class="input-group" action="/login/loginfarmer/" method = 'POST'>
             {% csrf_token %}
 
                 <input type="text" class="input-field" name="EmailId" placeholder="Email Id" required />
@@ -44,7 +44,7 @@
             {% endfor %}
 
             <!-- Registration -->
-            <form id="register" class="input-group" action="/login/add-farmer/" method="POST">
+            <form id="register"  style="top: 200px;" class="input-group" action="/login/add-farmer/" method="POST">
                 {% csrf_token %}
                 <input type="text" class="input-field" id="Farmer_name" name="Farmer_name" placeholder="Farmer Name"
                     required />
