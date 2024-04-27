@@ -1,0 +1,145 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Services</title>
+  <link rel="stylesheet" href="{%static 'css/services/services.css/'%}" />
+  <style>
+    #services {
+      max-height: 90vh;
+    }
+
+    section {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding: 80px 0 0;
+    }
+
+    section h2 {
+      /* font-size: 2rem; */
+      padding: 2px 8px 16px 8px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 52px;
+      line-height: 1;
+      color: var(--heading-color);
+    }
+
+    #service-offerings {
+      padding: 3px 8px;
+      font-size: 1.7rem
+        /* 24px */
+      ;
+      line-height: 2rem
+        /* 32px */
+      ;
+      font-weight: 500;
+      max-width: 56rem
+        /* 896px */
+      ;
+      text-align: center;
+      color: var(--sub-heading);
+    }
+
+    section .cards {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin-top: 50px;
+      padding: 0 10px;
+      justify-content: space-between;
+    }
+
+    section .cards .card:hover {
+      transform: scale(1.1);
+    }
+
+    section .cards .card {
+      background: var(--nav-color);
+      padding: 40px 15px;
+      list-style: none;
+      border-radius: 5px;
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
+      margin-bottom: 40px;
+      width: calc(100% / 3 - 30px);
+      text-align: center;
+      transition: transform 0.4s ease-in-out;
+    }
+
+    .portfolio .cards .card {
+      padding: 0 0 20px;
+    }
+
+    .heading-h3 {
+      color: var(--heading-color);
+    }
+
+    .sub-heading-p {
+      color: var(--text-color);
+    }
+
+    .services .card img {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 20px;
+      border-radius: 100%;
+      object-fit: cover;
+    }
+
+    .portfolio .card img {
+      width: 100%;
+      padding-bottom: 10px;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border-radius: 7px;
+    }
+
+    .cards .card p {
+      padding: 0 15px;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="services" id="services">
+    <h2>Our Services</h2>
+    <p id="service-offerings">Service offerings for farmers.</p>
+    <ul class="cards">
+      <li class="card">
+        <img
+          src="https://images.pexels.com/photos/19707897/pexels-photo-19707897/free-photo-of-aerial-view-of-people-manually-drying-rice.jpeg?auto=compress&cs=tinysrgb&w=600"
+          alt="img" />
+        <h3 class="heading-h3">Digital solutions</h3>
+        <p class="sub-heading-p">
+          Access digital services for farming needs.
+        </p>
+      </li>
+      <li class="card">
+        <img
+          src="https://images.pexels.com/photos/21711160/pexels-photo-21711160/free-photo-of-drone-shot-of-a-tractor-with-a-seeder-on-a-cropland.jpeg?auto=compress&cs=tinysrgb&w=600"
+          alt="img" />
+        <h3 class="heading-h3">Legal assistance</h3>
+        <p class="sub-heading-p">
+          Get help with legal matters related to farming.
+        </p>
+      </li>
+      <li class="card">
+        <img
+          src="https://images.pexels.com/photos/21711158/pexels-photo-21711158/free-photo-of-a-tractor-with-a-seeder-on-a-cropland.jpeg?auto=compress&cs=tinysrgb&w=600"
+          alt="img" />
+        <h3 class="heading-h3">Community forum</h3>
+        <p class="sub-heading-p">
+          Connect with other farmers and share knowledge.
+        </p>
+      </li>
+    </ul>
+  </section>
+</body>
+
+</html>
