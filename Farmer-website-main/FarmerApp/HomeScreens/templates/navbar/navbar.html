@@ -15,6 +15,56 @@
   <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
   <title> Navigation Menu Bar</title>
+  <style>
+    @media screen and (max-width: 860px) {
+      section>p {
+        text-align: center;
+      }
+
+      section .cards .card {
+        width: calc(100% / 2 - 15px);
+        margin-bottom: 30px;
+      }
+
+      .homepage .content h1 {
+        font-size: 40px;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+
+      .homepage .content .text {
+        font-size: 17px;
+      }
+
+      .content a {
+        font-size: 17px;
+        padding: 9px 20px;
+      }
+
+      .contact .row {
+        flex-direction: column;
+      }
+
+      .contact .row .col {
+        width: 100%;
+      }
+
+      .contact .row .col:last-child {
+        margin-top: 40px;
+      }
+
+      footer a {
+        height: 0;
+      }
+    }
+
+    @media screen and (max-width: 560px) {
+      section .cards .card {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+    }
+  </style>
 </head>
 
 <body>

@@ -128,7 +128,7 @@ form {
   }
 
   .form-group input[type="submit"] {
-    width: 100%;
+    width: 100%;Feedback_heading
   }
 } */
 .feedback-form-section p {
@@ -136,6 +136,7 @@ form {
   font-size: 1.6rem;
   line-height: 2rem;
   font-weight: 500;
+  margin: auto !important ;
 }
 .rating {
   text-align: center;
@@ -200,7 +201,7 @@ input[type="file"] {
   display: flex;
   justify-content: center;
   margin: 30px 0 20px 50px;
-  max-height: 5em;
+  /* box-sizing: none !important; */
   font-weight: 800;
 
   cursor: pointer;
@@ -232,6 +233,12 @@ input[type="file"] {
   font-size: 16px;
   color: var(--heading-color);
   margin-bottom: 12px;
+}
+.formbold-form-wrapper form {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.4s ease;
 }
 .formbold-form-label-2 {
   font-weight: 600;
