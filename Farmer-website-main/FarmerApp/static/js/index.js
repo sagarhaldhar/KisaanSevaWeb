@@ -1,46 +1,63 @@
 
-// function toggleMenu() {
-//   var x = document.getElementsByClassName("nav-bar")[0];
-//   if (x.style.display === "block") {
-//     x.style.display = "none";
-//   } else {
-//     x.style.display = "block";
-//   }
-// }
+const scrollRevealOption = {
+    distance: "50px",
+    origin: "bottom",
+    duration: 1000,
+};
 
+// header container
+ScrollReveal().reveal(".header__image img", {
+    ...scrollRevealOption,
+});
 
-// function showDropdown() {
-//   var dropdownOptions = document.querySelector(
-//     ".action_container .dropdown_options"
-//   );
-//   dropdownOptions.style.display = "block";
-// }
+ScrollReveal().reveal(
+    ".header__content h4, .header__content .section__header",
+    {
+        ...scrollRevealOption,
+        delay: 500,
+    }
+);
 
-// function hideDropdown() {
-//   var dropdownOptions = document.querySelector(
-//     ".action_container .dropdown_options"
-//   );
-//   dropdownOptions.style.display = "none";
-// }
+ScrollReveal().reveal(".header__content p", {
+    ...scrollRevealOption,
+    delay: 1000,
+});
 
-// Function to hide dropdown options when clicking outside of it
-// function hideDropdownOnClickOutside(event) {
-//   var dropdownOptions = document.querySelector(
-//     ".action_container .dropdown_options"
-//   );
-//   var isClickInside = dropdownOptions.contains(event.target);
-//   if (!isClickInside) {
-//     hideDropdown();
-//   }
-// }
+ScrollReveal().reveal(".header__btn", {
+    ...scrollRevealOption,
+    delay: 1500,
+});
 
-// Add event listener to hide dropdown options when clicking outside of it
-// document.addEventListener("click", hideDropdownOnClickOutside);
+// about container
+ScrollReveal().reveal(".about__image img", {
+    ...scrollRevealOption,
+    origin: "left",
+});
 
+ScrollReveal().reveal(".about__content .section__header", {
+    ...scrollRevealOption,
+    delay: 500,
+});
 
-// document.body.addEventListener("click", function (event) {
+ScrollReveal().reveal(".about__content .section__description", {
+    ...scrollRevealOption,
+    delay: 1000,
+});
 
-//   if (!event.target.closest(".action_container")) {
-//     hideDropdown();
-//   }
-// });
+ScrollReveal().reveal(".about__card", {
+    ...scrollRevealOption,
+    delay: 1500,
+    interval: 500,
+});
+
+// price container
+ScrollReveal().reveal(".price__card", {
+    ...scrollRevealOption,
+    interval: 500,
+});
+
+const swiper = new Swiper(".swiper", {
+    loop: true,
+    slidesPerView: "auto",
+    spaceBetween: 20,
+});

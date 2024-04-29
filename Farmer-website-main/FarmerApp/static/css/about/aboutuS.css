@@ -1,11 +1,4 @@
 /* About Us page styles */
-body {
-  font-family: Arial, sans-serif;
-
-  color: var(--text-color);
-  margin: 0;
-  padding: 0;
-}
 
 .about-section {
   text-align: center;
@@ -167,7 +160,7 @@ body {
   width: 10%;
   border: 2px solid rgb(197, 196, 196);
 }
-.logo:hover {
+.kisanlogo:hover {
   border: 2px solid rgb(31, 79, 10);
 }
 .text {
