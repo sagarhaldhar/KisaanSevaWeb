@@ -57,6 +57,8 @@ def add_scholar(request):
     messages.success(request,'successfully saved..Please login')
     return redirect('/login/scholarlogin/')
 
+
+
 def loginfarmer(request):
   if request.method == "POST":
     emailid = request.POST.get("EmailId")
