@@ -114,6 +114,7 @@ footer {
   color: var(--heading-color);
   font-size: 1.6em;
   white-space: nowrap;
+  margin-bottom: 15px;
 }
 
 .footer-ul {
