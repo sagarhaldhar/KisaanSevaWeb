@@ -1,11 +1,4 @@
 /* About Us page styles */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #debcbc;
-  color: #333;
-  margin: 0;
-  padding: 0;
-}
 
 .about-section {
   text-align: center;
@@ -21,7 +14,7 @@ body {
   font-size: 36px;
   margin-bottom: 20px;
   animation: scale-in 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  color: #333; /* Set text color */
+  color: var(--text-color);
   transition: color 0.3s ease; /* Add transition effect */
   border-bottom: 1px solid rgb(26, 25, 25);
 }
@@ -36,7 +29,7 @@ body {
   line-height: 1.6;
   margin-bottom: 20px;
   animation: slide-up 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  color: #555; /* Set text color */
+  color: var(--text-color);
   transition: color 0.3s ease; /* Add transition effect */
 }
 
@@ -77,9 +70,7 @@ body {
   box-shadow: 0 0 10px rgba(81, 1, 1, 0.1);
   padding: 20px;
   flex: 1 0 calc(33.33% - 20px); /* Adjust this value for responsiveness */
-  max-width: calc(
-    33.33% - 20px
-  ); /* Adjust this value for responsiveness */
+  max-width: calc(33.33% - 20px); /* Adjust this value for responsiveness */
   animation: fade-in 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
@@ -169,7 +160,7 @@ body {
   width: 10%;
   border: 2px solid rgb(197, 196, 196);
 }
-.logo:hover {
+.kisanlogo:hover {
   border: 2px solid rgb(31, 79, 10);
 }
 .text {

@@ -21,7 +21,7 @@ STATIC_DIR = os.path.join(BASE_DIR,'static')
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-b!r+j-qu5li)01!lb-sxczgf(&s2-j_k$)ohb=*fe!+vwmb9(5'
+SECRET_KEY = 'django-insecure-b!r+j-qu5li)01!lb-scag(&s2-j_k$)ohb=*fe!+vamp9(5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -82,12 +82,14 @@ DATABASES = {
     #     'NAME': BASE_DIR / 'db.sqlite3',
     # }
     "default": {
-        "ENGINE": "django.db.backends.mysql",
-        "NAME": "Kisaanseva",
-        "USER": "sagar",
-        "PASSWORD": "sagar123",
-        "HOST": "localhost",
-    }
+        "ENGINE": "mssql",
+        "NAME": "KissanSevaDataBase",
+        "USER": "",
+        "PASSWORD": "",
+        "HOST": "localhost\SQLEXPRESS",
+        "OPTIONS": {"driver": "ODBC Driver 17 for SQL Server", 
+        },
+    },
 }
 
 
@@ -131,9 +133,9 @@ STATIC_URL = 'static/'
 
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = 'C:\\Users\\sagar\\Desktop\\Kisaan seva project\\Farmer-website-main\\FarmerApp\\media'
+# MEDIA_ROOT = 'C:\Users\Himanshu Sharma\OneDrive\Desktop\kisan\KisaanSevaWeb\Farmer-website-main\FarmerApp\media'
 # settings.py
-
+MEDIA_ROOT = r'C:\Users\Himanshu Sharma\OneDrive\Desktop\kisan\KisaanSevaWeb\Farmer-website-main\FarmerApp\media'
 
 
 

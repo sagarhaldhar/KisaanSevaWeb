@@ -1,78 +1,63 @@
 
-function toggleMenu() {
-  var x = document.getElementsByClassName("nav-bar")[0];
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-}
+const scrollRevealOption = {
+    distance: "50px",
+    origin: "bottom",
+    duration: 1000,
+};
 
-
-function showDropdown() {
-  var dropdownOptions = document.querySelector(
-    ".action_container .dropdown_options"
-  );
-  dropdownOptions.style.display = "block";
-}
-
-function hideDropdown() {
-  var dropdownOptions = document.querySelector(
-    ".action_container .dropdown_options"
-  );
-  dropdownOptions.style.display = "none";
-}
-
-// Function to hide dropdown options when clicking outside of it
-function hideDropdownOnClickOutside(event) {
-  var dropdownOptions = document.querySelector(
-    ".action_container .dropdown_options"
-  );
-  var isClickInside = dropdownOptions.contains(event.target);
-  if (!isClickInside) {
-    hideDropdown();
-  }
-}
-
-// Add event listener to hide dropdown options when clicking outside of it
-document.addEventListener("click", hideDropdownOnClickOutside);
-
-// Add event listener to hide dropdown options when clicking anywhere on the entire page
-document.body.addEventListener("click", function (event) {
-  // Check if the clicked element is part of the dropdown
-  if (!event.target.closest(".action_container")) {
-    hideDropdown();
-  }
+// header container
+ScrollReveal().reveal(".header__image img", {
+    ...scrollRevealOption,
 });
 
-function rate(score) {
-  var stars = document.querySelectorAll(".rating span");
-  for (var i = 0; i < stars.length; i++) {
-    if (i < score) {
-      stars[i].classList.add("active");
-    } else {
-      stars[i].classList.remove("active");
+ScrollReveal().reveal(
+    ".header__content h4, .header__content .section__header",
+    {
+        ...scrollRevealOption,
+        delay: 500,
     }
-  }
+);
 
-  var ratingEmoji = document.getElementById("rating-emoji");
-  switch (score) {
-    case 1:
-      ratingEmoji.innerHTML = "😢";
-      break;
-    case 2:
-      ratingEmoji.innerHTML = "😐";
-      break;
-    case 3:
-      ratingEmoji.innerHTML = "😊";
-      break;
-    case 4:
-      ratingEmoji.innerHTML = "😄";
-      break;
-    case 5:
-      ratingEmoji.innerHTML = "😍";
-      break;
-    default:
-      ratingEmoji.innerHTML = "";
-  }
-}
+ScrollReveal().reveal(".header__content p", {
+    ...scrollRevealOption,
+    delay: 1000,
+});
+
+ScrollReveal().reveal(".header__btn", {
+    ...scrollRevealOption,
+    delay: 1500,
+});
+
+// about container
+ScrollReveal().reveal(".about__image img", {
+    ...scrollRevealOption,
+    origin: "left",
+});
+
+ScrollReveal().reveal(".about__content .section__header", {
+    ...scrollRevealOption,
+    delay: 500,
+});
+
+ScrollReveal().reveal(".about__content .section__description", {
+    ...scrollRevealOption,
+    delay: 1000,
+});
+
+ScrollReveal().reveal(".about__card", {
+    ...scrollRevealOption,
+    delay: 1500,
+    interval: 500,
+});
+
+// price container
+ScrollReveal().reveal(".price__card", {
+    ...scrollRevealOption,
+    interval: 500,
+});
+
+const swiper = new Swiper(".swiper", {
+    loop: true,
+    slidesPerView: "auto",
+    spaceBetween: 20,
+});
