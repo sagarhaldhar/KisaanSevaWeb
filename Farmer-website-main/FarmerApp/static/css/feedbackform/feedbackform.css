@@ -175,7 +175,7 @@ form {
 .custom-file-input {
   display: inline-block;
   padding: 8px 16px;
-  background-color: var(--nav-color);
+  background-color: var(--body-color);
   color: var(--text-color);
   border: none;
   border-radius: 4px;
