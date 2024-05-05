@@ -9,4 +9,5 @@ urlpatterns = [
     path('add-scholar/',add_scholar),
     path('loginfarmer/',loginfarmer),
     path('loginscholar/',loginscholar),
+
 ]

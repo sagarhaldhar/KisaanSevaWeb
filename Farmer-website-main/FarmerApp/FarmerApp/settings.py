@@ -77,20 +77,21 @@ WSGI_APPLICATION = 'FarmerApp.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': BASE_DIR / 'db.sqlite3',
-    # }
-    "default": {
-        "ENGINE": "mssql",
-        "NAME": "KissanSevaDataBase",
-        "USER": "",
-        "PASSWORD": "",
-        "HOST": "localhost\SQLEXPRESS",
-        "OPTIONS": {"driver": "ODBC Driver 17 for SQL Server", 
-        },
-    },
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
+#     "default": {
+#         "ENGINE": "mssql",
+#         "NAME": "KissanSevaDataBase",
+#         "USER": "",
+#         "PASSWORD": "",
+#         "HOST": "localhost\SQLEXPRESS",
+#         "OPTIONS": {"driver": "ODBC Driver 17 for SQL Server", 
+#         },
+#     },
+# }
 
 
 # Password validation
@@ -135,7 +136,7 @@ STATIC_URL = 'static/'
 MEDIA_URL = '/media/'
 # MEDIA_ROOT = 'C:\Users\Himanshu Sharma\OneDrive\Desktop\kisan\KisaanSevaWeb\Farmer-website-main\FarmerApp\media'
 # settings.py
-MEDIA_ROOT = r'C:\Users\Himanshu Sharma\OneDrive\Desktop\kisan\KisaanSevaWeb\Farmer-website-main\FarmerApp\media'
+# MEDIA_ROOT = r'C:\Users\Himanshu Sharma\OneDrive\Desktop\kisan\KisaanSevaWeb\Farmer-website-main\FarmerApp\media'
 
 
 

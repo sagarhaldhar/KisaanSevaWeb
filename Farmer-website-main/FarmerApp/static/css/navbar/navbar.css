@@ -13,12 +13,12 @@
 /* ===== Colours ===== */
 :root {
   --body-color: #ffffdd;
-  --nav-color: #898121;
+  --nav-color: #41b308e0;
   --dropdown-color: #f9f9f9;
   --dropdown-text-color: #010718;
-  --side-nav: #898121;
-  --text-color: #fefbf6;
-  --heading-color: #a2c579;
+  --side-nav: #55ac08d5;
+  --text-color: #c8f7f6;
+  --heading-color: #406714;
   --search-bar: #f2f2f2;
   --search-text: #010718;
   --sub-heading: #016a70d2;
@@ -36,7 +36,7 @@ body.dark {
   --nav-color: #242526;
   --side-nav: #242526;
   --text-color: #ccc;
-  --heading-color: #898121;
+  --heading-color: #d3a83b;
   --search-bar: #242526;
   --dropdown-color: #18191a;
   --dropdown-text-color: #ccc;
