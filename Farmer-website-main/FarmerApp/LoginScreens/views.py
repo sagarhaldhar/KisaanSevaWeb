@@ -12,18 +12,14 @@ def scholarlogin(request):
 
 def add_farmer(request):
   if request.method == "POST":
-    farmer_name = request.POST.get("Farmer_name")
-    contact_num = request.POST.get("Contact_num")
-    email_id = request.POST.get("Email_id")
-    password = request.POST.get("Password")
     f = farmer()
-    f.Farmer_name = farmer_name
-    f.Contact_num = contact_num
-    f.Email_id = email_id
-    f.Password = password
-  # f.save()
+    f.Farmer_name = request.POST.get("Farmer_name")
+    f.Contact_num = request.POST.get("Contact_num")
+    f.Email_id = request.POST.get("Email_id")
+    f.Password = request.POST.get("Password")
+    
   # checking existing -
-    check_existing = farmer.objects.filter(Farmer_name=farmer_name) and farmer.objects.filter(Contact_num = contact_num) and farmer.objects.filter(Email_id = email_id) and farmer.objects.filter(Password = password).exists()
+    check_existing = farmer.objects.filter(Farmer_name=f.Farmer_name) and farmer.objects.filter(Contact_num = f.Contact_num) and farmer.objects.filter(Email_id = f.Email_id) and farmer.objects.filter(Password = f.Password).exists()
     if check_existing:
       messages.error(request,"User already exists! Please login...")
       return redirect('/login/farmerlogin/')
@@ -61,14 +57,12 @@ def add_scholar(request):
 
 def loginfarmer(request):
   if request.method == "POST":
-    emailid = request.POST.get("EmailId")
-    password1 = request.POST.get("Logpassword")
-  f = farmer()
-  f.Email_id = emailid
-  f.Password = password1
+    f = farmer()
+    f.Email_id = request.POST.get("EmailId")
+    f.Password = request.POST.get("Logpassword")
 
   # checking existing -
-  check_existing =farmer.objects.filter(Email_id = emailid) and farmer.objects.filter(Password = password1).exists()
+  check_existing =farmer.objects.filter(Email_id = f.Email_id) and farmer.objects.filter(Password = f.Password).exists()
 
   if check_existing:
     return render(request,"home/index.html",{})
