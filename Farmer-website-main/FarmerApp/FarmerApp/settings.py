@@ -139,7 +139,7 @@ MEDIA_URL = '/media/'
 # MEDIA_ROOT = r'C:\Users\Himanshu Sharma\OneDrive\Desktop\kisan\KisaanSevaWeb\Farmer-website-main\FarmerApp\media'
 
 
-
+# aman
 STATICFILES_DIRS = [STATIC_DIR,]
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
