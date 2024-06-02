@@ -1,230 +1,249 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>Kissan Seva</title>
+    <link rel="stylesheet" href="{%static 'css/home/index.css'%}" />
+    <link rel="stylesheet" href="{%static 'css/navber/navber.css'%}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
 
-<head>
-  <title>Kissan Seva</title>
-  <link rel="stylesheet" href="{%static 'css/home/index.css'%}" />
-  <link rel="stylesheet" href="{%static 'css/navber/navber.css'%}" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <style>
+      .portfolio .cards .card {
+        padding: 0 0 20px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+          rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+      }
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-  <style>
-    .portfolio .cards .card {
+      .services .card img {
+        width: 120px;
 
-      padding: 0 0 20px;
-      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-    }
+        height: auto;
+        margin-bottom: 20px;
+        border-radius: 100%;
+        object-fit: cover;
+      }
 
+      .portfolio .card img {
+        width: 100%;
+        background-position: 100% 100%;
+        object-fit: cover;
+        padding-bottom: 10px;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        border-radius: 7px;
+      }
 
-    .services .card img {
-      width: 120px;
+      .cards .card p {
+        padding: 0 15px;
+        color: var(--text-color);
+      }
 
-      height: auto;
-      margin-bottom: 20px;
-      border-radius: 100%;
-      object-fit: cover;
-    }
+      .cards .card h3 {
+        color: var(--heading-color);
+      }
 
-    .portfolio .card img {
-      width: 100%;
-      background-position: 100% 100%;
-      object-fit: cover;
-      padding-bottom: 10px;
-      aspect-ratio: 16 / 9;
-      object-fit: cover;
-      border-radius: 7px;
-    }
+      .section__container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 5rem 1rem;
+      }
 
-    .cards .card p {
-      padding: 0 15px;
-      color: var(--text-color);
-    }
+      .section__header::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        width: 50px;
+        height: 3px;
+        background-color: var(--text-color);
+      }
 
-    .cards .card h3 {
-      color: var(--heading-color);
-    }
+      .section__description {
+        max-width: 900px;
+        color: var(--sub-heading);
+      }
 
-    .section__container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 5rem 1rem;
-    }
+      img {
+        display: flex;
+        width: 100%;
+      }
 
+      a {
+        text-decoration: none;
+        white-space: nowrap;
+      }
 
-    .section__header::after {
-      position: absolute;
-      content: "";
-      left: 0;
-      bottom: 0;
-      width: 50px;
-      height: 3px;
-      background-color: var(--text-color);
-    }
+      .swiper {
+        margin-top: 2rem;
+        padding-bottom: 2rem;
+        width: 100%;
+      }
 
-    .section__description {
-      max-width: 900px;
-      color: var(--sub-heading);
-    }
+      .swiper-slide {
+        max-width: 500px;
+        padding-inline: 1rem;
+        padding-top: 4rem;
+      }
 
-    img {
-      display: flex;
-      width: 100%;
-    }
+      .client__card {
+        position: relative;
+        padding-block: 4rem 2rem;
+        padding-inline: 2rem;
+        border-radius: 5px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        background-color: var(--nav-color);
+      }
 
-    a {
-      text-decoration: none;
-      white-space: nowrap;
-    }
+      .client__card img {
+        position: absolute;
+        top: 0;
+        left: 2rem;
+        transform: translateY(-50%);
+        max-width: 80px;
+        border-radius: 100%;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        width: 80px;
+        height: 80px;
+      }
 
+      .client__ratings {
+        margin-bottom: 1rem;
+        color: goldenrod;
+      }
 
+      .client__card p {
+        margin-bottom: 1rem;
+        color: var(--text-color);
+      }
 
+      .client__card h4 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--heading-color);
+      }
 
+      .client__card h5 {
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--sub-heading);
+      }
+    </style>
+  </head>
 
-    .swiper {
-      margin-top: 2rem;
-      padding-bottom: 2rem;
-      width: 100%;
-    }
+  <body>
+    <header>{% include "navbar/navbar.html" %}</header>
 
-    .swiper-slide {
-      max-width: 500px;
-      padding-inline: 1rem;
-      padding-top: 4rem;
-    }
+    <main>
+      <!-- <section> -->
+      {% include 'hero/hero.html' %}
+      <!-- </section> -->
 
-    .client__card {
-      position: relative;
-      padding-block: 4rem 2rem;
-      padding-inline: 2rem;
-      border-radius: 5px;
-      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-      background-color: var(--nav-color);
-    }
+      <!-- <section> -->
+      {% include 'services/services.html' %}
+      <!-- </section> -->
 
-    .client__card img {
-      position: absolute;
-      top: 0;
-      left: 2rem;
-      transform: translateY(-50%);
-      max-width: 80px;
-      border-radius: 100%;
-      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-      width: 80px;
-      height: 80px;
-    }
+      <div>
+        <section class="portfolio" id="portfolio">
+          <h2>Our Blogs</h2>
+          <p class="sub-heading-p">Main Challenges Facing Agriculture.</p>
+          <ul class="cards">
+            <li class="card">
+              <img
+                src="https://images.pexels.com/photos/5909696/pexels-photo-5909696.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="img"
+              />
+              <h3>Farming Challenges</h3>
+              <p>
+                Farming faces various obstacles, including climate change, soil
+                degradation, and water scarcity. These challenges threaten
+                global food security and require innovative solutions for
+                sustainable agriculture.
+              </p>
+            </li>
+            <li class="card">
+              <img
+                src="https://images.pexels.com/photos/4207909/pexels-photo-4207909.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="img"
+              />
+              <h3>Climate Change</h3>
+              <p>
+                Changing weather patterns, such as extreme heat, droughts, and
+                floods, disrupt crop growth and threaten agricultural
+                productivity worldwide.
+              </p>
+            </li>
+            <li class="card">
+              <img
+                src="https://images.pexels.com/photos/7415326/pexels-photo-7415326.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="img"
+              />
+              <h3>Soil Degradation</h3>
+              <p>
+                Erosion, nutrient depletion, and pollution degrade soil quality,
+                reducing fertility and impacting crop yields, posing a
+                significant challenge to farmers.
+              </p>
+            </li>
+            <li class="card">
+              <img
+                src="https://images.pexels.com/photos/14689034/pexels-photo-14689034.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="img"
+              />
+              <h3>Water Scarcity</h3>
+              <p>
+                Depleting water resources and inefficient irrigation practices
+                lead to water scarcity, jeopardizing crop production and
+                agricultural sustainability.
+              </p>
+            </li>
+            <li class="card">
+              <img
+                src="https://images.pexels.com/photos/17315200/pexels-photo-17315200/free-photo-of-indian-cows-on-pasture.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="img"
+              />
+              <h3>Market Volatility</h3>
+              <p>
+                Fluctuating commodity prices and trade uncertainties impact farm
+                profitability and livelihoods, necessitating risk management
+                strategies for farmers.
+              </p>
+            </li>
+            <li class="card">
+              <img
+                src="https://images.pexels.com/photos/19643774/pexels-photo-19643774/free-photo-of-view-of-a-banana-plantation-and-palm-trees.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="img"
+              />
+              <h3>Technology Adoption</h3>
+              <p>
+                Technological innovations, such as precision agriculture and
+                digital farming, offer opportunities to optimize resource use
+                and enhance productivity in agriculture.
+              </p>
+            </li>
+          </ul>
+        </section>
+      </div>
+      <section>{% include 'chatwithus/chatwithus.html' %}</section>
 
-    .client__ratings {
-      margin-bottom: 1rem;
-      color: goldenrod;
-    }
+      <section>{% include 'feedbackform/feedbackform.html' %}</section>
 
-    .client__card p {
-      margin-bottom: 1rem;
-      color: var(--text-color);
-    }
-
-    .client__card h4 {
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: var(--heading-color);
-    }
-
-    .client__card h5 {
-      font-size: 1rem;
-      font-weight: 500;
-      color: var(--sub-heading);
-    }
-  </style>
-</head>
-
-<body>
-  <header>
-    {% include "navbar/navbar.html" %}
-  </header>
-
-
-  <main>
-    <!-- <section> -->
-    {% include 'hero/hero.html' %}
-    <!-- </section> -->
-
-
-    <!-- <section> -->
-    {% include 'services/services.html' %}
-    <!-- </section> -->
-
-    <div>
-      <section class="portfolio" id="portfolio">
-        <h2>Our Blogs</h2>
-        <p class="sub-heading-p">Main Challenges Facing Agriculture.</p>
-        <ul class="cards">
-          <li class="card">
-            <img
-              src="https://images.pexels.com/photos/5909696/pexels-photo-5909696.jpeg?auto=compress&cs=tinysrgb&w=600"
-              alt="img">
-            <h3>Farming Challenges</h3>
-            <p>Farming faces various obstacles, including climate change, soil degradation, and water scarcity. These
-              challenges threaten global food security and require innovative solutions for sustainable agriculture.</p>
-          </li>
-          <li class="card">
-            <img
-              src="https://images.pexels.com/photos/4207909/pexels-photo-4207909.jpeg?auto=compress&cs=tinysrgb&w=600"
-              alt="img">
-            <h3>Climate Change</h3>
-            <p>Changing weather patterns, such as extreme heat, droughts, and floods, disrupt crop growth and threaten
-              agricultural productivity worldwide.</p>
-          </li>
-          <li class="card">
-            <img
-              src="https://images.pexels.com/photos/7415326/pexels-photo-7415326.jpeg?auto=compress&cs=tinysrgb&w=600"
-              alt="img">
-            <h3>Soil Degradation</h3>
-            <p>Erosion, nutrient depletion, and pollution degrade soil quality, reducing fertility and impacting crop
-              yields, posing a significant challenge to farmers.</p>
-
-          </li>
-          <li class="card">
-            <img
-              src="https://images.pexels.com/photos/14689034/pexels-photo-14689034.jpeg?auto=compress&cs=tinysrgb&w=600"
-              alt="img">
-            <h3>Water Scarcity</h3>
-            <p>Depleting water resources and inefficient irrigation practices lead to water scarcity, jeopardizing crop
-              production and agricultural sustainability.</p>
-
-          </li>
-          <li class="card">
-            <img
-              src="https://images.pexels.com/photos/17315200/pexels-photo-17315200/free-photo-of-indian-cows-on-pasture.jpeg?auto=compress&cs=tinysrgb&w=600"
-              alt="img">
-            <h3>Market Volatility</h3>
-            <p>Fluctuating commodity prices and trade uncertainties impact farm profitability and livelihoods,
-              necessitating risk management strategies for farmers.</p>
-          </li>
-          <li class="card">
-            <img
-              src="https://images.pexels.com/photos/19643774/pexels-photo-19643774/free-photo-of-view-of-a-banana-plantation-and-palm-trees.jpeg?auto=compress&cs=tinysrgb&w=600"
-              alt="img">
-            <h3>Technology Adoption</h3>
-            <p>Technological innovations, such as precision agriculture and digital farming, offer opportunities to
-              optimize resource use and enhance productivity in agriculture.</p>
-          </li>
-        </ul>
-      </section>
-    </div>
-    <section>
-      {% include 'chatwithus/chatwithus.html' %}
-    </section>
-
-    <section>
-      {% include 'feedbackform/feedbackform.html' %}
-
-    </section>
-
-    <!-- <div class="main">
+      <!-- <div class="main">
       <div class="category_heading">Trending blogs</div>
       <div class="category_items">
 
@@ -242,7 +261,7 @@
       </div>
 
     </div> -->
-    <!-- 
+      <!-- 
     <div class="Testimonials_heading">Testimonials</div>
     <div class="Testimonials_items">
       <a href="Testimonials.html"><img class="T_item" src="{%static 'images/t1.png'%}" /></a>
@@ -253,115 +272,122 @@
 
       <a href="Testimonials.html"><img class="T_item" src="{%static 'images/t4.png'%}" /></a>
     </div> -->
-    <section class="section__container client__container" id="client">
-      <h2 class="section__header">What People Says About Us?</h2>
-      <p class="section__description">
-        Farming Solutions: Innovating for Sustainable Farming. Transforming Indian Agriculture.
-      </p>
-      <!-- Slider main container -->
-      <div class="swiper">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide">
-            <div class="client__card">
-              <img
-                src="https://images.pexels.com/photos/19486033/pexels-photo-19486033/free-photo-of-photo-of-a-man-sitting-in-a-barn.jpeg?auto=compress&cs=tinysrgb&w=600"
-                alt="client" />
-              <div class="client__ratings">
-                <span><i class="ri-star-fill"></i></span>
-                <span><i class="ri-star-fill"></i></span>
-                <span><i class="ri-star-fill"></i></span>
-                <span><i class="ri-star-fill"></i></span>
-                <span><i class="ri-star-line"></i></span>
+      <section class="section__container client__container" id="client">
+        <h2 class="section__header">What People Says About Us?</h2>
+        <p class="section__description">
+          Farming Solutions: Innovating for Sustainable Farming. Transforming
+          Indian Agriculture.
+        </p>
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="client__card">
+                <img
+                  src="https://images.pexels.com/photos/19486033/pexels-photo-19486033/free-photo-of-photo-of-a-man-sitting-in-a-barn.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  alt="client"
+                />
+                <div class="client__ratings">
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-line"></i></span>
+                </div>
+                <p>
+                  Farming Solutions has been instrumental in revolutionizing the
+                  way we approach agriculture. Their innovative methods and
+                  personalized guidance have significantly boosted our farm's
+                  productivity. I highly recommend their services to fellow
+                  farmers.
+                </p>
+                <h4>Rajesh Patel</h4>
+                <h5>farmer</h5>
               </div>
-              <p>
-                Farming Solutions has been instrumental in revolutionizing the way we approach agriculture. Their
-                innovative methods and personalized guidance have significantly boosted our farm's productivity. I
-                highly recommend their services to fellow farmers.
-              </p>
-              <h4>Rajesh Patel</h4>
-              <h5>farmer</h5>
             </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="client__card">
-              <img
-                src="https://images.pexels.com/photos/14915250/pexels-photo-14915250.jpeg?auto=compress&cs=tinysrgb&w=600"
-                alt="client" />
-              <div class="client__ratings">
-                <span><i class="ri-star-fill"></i></span>
-                <span><i class="ri-star-fill"></i></span>
-                <span><i class="ri-star-fill"></i></span>
-                <span><i class="ri-star-fill"></i></span>
-                <span><i class="ri-star-half-fill"></i></span>
+            <div class="swiper-slide">
+              <div class="client__card">
+                <img
+                  src="https://images.pexels.com/photos/14915250/pexels-photo-14915250.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  alt="client"
+                />
+                <div class="client__ratings">
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-half-fill"></i></span>
+                </div>
+                <p>
+                  I'm incredibly grateful for the support and expertise provided
+                  by Farming Solutions. Their team's deep knowledge of Indian
+                  agriculture and dedication to sustainable practices have made
+                  a profound impact on our farm's success. Thank you for your
+                  invaluable contributions.
+                </p>
+                <h4>Priya Sharma</h4>
+                <h5>Research scholar</h5>
               </div>
-              <p>
-                I'm incredibly grateful for the support and expertise provided by Farming Solutions. Their team's deep
-                knowledge of Indian agriculture and dedication to sustainable practices have made a profound impact on
-                our farm's success. Thank you for your invaluable contributions.
-              </p>
-              <h4>Priya Sharma</h4>
-              <h5>Research scholar</h5>
             </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="client__card">
-              <img
-                src="https://images.pexels.com/photos/8261306/pexels-photo-8261306.jpeg?auto=compress&cs=tinysrgb&w=600"
-                alt="client" />
-              <div class="client__ratings">
-                <span><i class="ri-star-fill"></i></span>
-                <span><i class="ri-star-fill"></i></span>
-                <span><i class="ri-star-fill"></i></span>
-                <span><i class="ri-star-half-fill"></i></span>
-                <span><i class="ri-star-line"></i></span>
+            <div class="swiper-slide">
+              <div class="client__card">
+                <img
+                  src="https://images.pexels.com/photos/8261306/pexels-photo-8261306.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  alt="client"
+                />
+                <div class="client__ratings">
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-half-fill"></i></span>
+                  <span><i class="ri-star-line"></i></span>
+                </div>
+                <p>
+                  Partnering with Farming Solutions has been a game-changer for
+                  our family farm. Their tailored solutions and commitment to
+                  excellence have helped us overcome challenges and achieve
+                  remarkable results. I wholeheartedly endorse their services to
+                  farmers across India.
+                </p>
+                <h4>Rahul Gupta</h4>
+                <h5>farmer</h5>
               </div>
-              <p>
-                Partnering with Farming Solutions has been a game-changer for our family farm. Their tailored solutions
-                and commitment to excellence have helped us overcome challenges and achieve remarkable results. I
-                wholeheartedly endorse their services to farmers across India.
-              </p>
-              <h4> Rahul Gupta</h4>
-              <h5>farmer</h5>
             </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="client__card">
-              <img
-                src="https://images.pexels.com/photos/14767236/pexels-photo-14767236.jpeg?auto=compress&cs=tinysrgb&w=600"
-                alt="client" />
-              <div class="client__ratings">
-                <span><i class="ri-star-fill"></i></span>
-                <span><i class="ri-star-fill"></i></span>
-                <span><i class="ri-star-fill"></i></span>
-                <span><i class="ri-star-fill"></i></span>
-                <span><i class="ri-star-fill"></i></span>
+            <div class="swiper-slide">
+              <div class="client__card">
+                <img
+                  src="https://images.pexels.com/photos/14767236/pexels-photo-14767236.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  alt="client"
+                />
+                <div class="client__ratings">
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                </div>
+                <p>
+                  "Farming Solutions has been a trusted ally in our farming
+                  journey. Their holistic approach and innovative techniques
+                  have not only increased our farm's yield but also improved
+                  soil health and sustainability. We're proud to be associated
+                  with such a reputable organization.
+                </p>
+                <h4>Anjali Patel</h4>
+                <h5>Research scholar</h5>
               </div>
-              <p>
-                "Farming Solutions has been a trusted ally in our farming journey. Their holistic approach and
-                innovative techniques have not only increased our farm's yield but also improved soil health and
-                sustainability. We're proud to be associated with such a reputable organization.
-              </p>
-              <h4>Anjali Patel</h4>
-              <h5>Research scholar</h5>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
+    <footer>{% include "footer/footer.html" %}</footer>
 
-  </main>
-  <footer>
-    {% include "footer/footer.html" %}
-  </footer>
-
-
-
-  <!-- javascript -->
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-  <script src="{%static 'js/index.js'%}"></script>
-</body>
-
+    <!-- javascript -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="{%static 'js/index.js'%}"></script>
+  </body>
 </html>
